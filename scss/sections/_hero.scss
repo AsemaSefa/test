@@ -1,0 +1,47 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+@use "../components/cards" as *;
+
+.intro-section {
+  @include gradient;
+  padding: 9.4rem 0 0 2rem;
+  width: 100%;
+ 
+  margin-bottom: 3rem;
+  @include media-breakpoint-up(lg) {
+     min-height: 70vh;
+  }
+  // @include media-breakpoint-down(md) {
+  //   height: 105%;
+  // }
+
+  .jobs {
+    margin-top: -0.7rem;
+    
+
+  }
+  .image-conatiner {
+    @include absolute-center;
+    width: 200px;
+    height: 299px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  }
+  
+  .intros {
+    position: relative;
+  }
+}
+.intro2{
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    left:-1000000;
+     display: none;
+  }
+ 
+
+}

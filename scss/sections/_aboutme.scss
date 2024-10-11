@@ -1,0 +1,44 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.about_me {
+  position: relative;
+  min-height: 50vh;
+  margin: 7rem 0;
+  .container {
+    // @include absolute-center;
+    width: 80%;
+    padding: 2rem;
+    background-color: $white;
+    border-radius: 1rem;
+
+    .image-containers {
+      // @include absolute-center;
+      width: 300px;
+      height: auto;
+      margin: 2rem;
+      @include media-breakpoint-down(md) {
+        width:150px ;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: block;
+        border: 4px double $primary;
+      }
+    }
+    tbody {
+      tr {
+        text-transform: capitalize;
+        td {
+          color: $primary;
+          a {
+            text-decoration: inherit;
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+}

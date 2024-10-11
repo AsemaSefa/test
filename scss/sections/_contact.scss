@@ -1,0 +1,54 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.contact {
+  @include gradient;
+  padding: 0.5rem 0;
+
+  form {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    border: 1px solid $white;
+    width: 85%;
+    line-height: 2;
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    //    background-blend-mode: ;
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      input,
+      textarea,
+      label {
+        display: block;
+        width: 100%;
+      }
+    }
+    input,
+    textarea,
+    label {
+      display: block;
+      width: 100%;
+
+      text-transform: capitalize;
+      border-radius: 0.5rem;
+      border: none;
+    }
+    input,
+    textarea {
+      padding: 5px 10px;
+    }
+    button {
+      margin-top: 1rem;
+      border-radius: 0.5rem;
+      width: fit-content;
+      border: none;
+      color: $primary;
+      padding: 5px 8px;
+    }
+  }
+}

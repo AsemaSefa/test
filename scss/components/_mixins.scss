@@ -1,0 +1,29 @@
+@use "../custom" as *;
+// GRADIENT MIXINS
+@mixin  gradient{
+     background: linear-gradient(
+    to right,
+    rgba($primary, 0.95),
+    rgba($secondary, 0.95)
+  );
+}
+
+// absolute center
+
+@mixin absolute-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+}
+@mixin scaler{
+  transform: scale(103%,103%);
+  transition-duration: 5s;
+
+}
+@mixin background-gray-container{
+  background-color: $gray-100;
+  border-radius: 6px;
+  
+
+}

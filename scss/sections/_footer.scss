@@ -1,0 +1,54 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.footer {
+  border-top: 1px solid $white;
+  padding: 2rem 0;
+  @include gradient;
+  line-height: 2;
+  p {
+    color: $white;
+    white-space: nowrap;
+    margin-top: 1rem;
+    // border-top: 0.5px solid $white;
+  }
+  .footer-sections {
+    width: 150px;
+    
+    @include media-breakpoint-down(sm) {
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        padding-left: 1rem;
+        font-weight: 500;
+        font-size: small;
+        text-transform: capitalize;
+
+        a {
+          color: $white;
+          text-transform: capitalize;
+          text-decoration: none;
+
+          display: block;
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+      img {
+        padding: 0;
+        width: 80%;
+        height: auto;
+        margin: 0;
+        // position: absolute;
+
+        &:hover {
+          animation: scaler 4s linear;
+        }
+      }
+    }
+  }
+}
